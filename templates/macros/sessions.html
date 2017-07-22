@@ -1,0 +1,11 @@
+{% macro render_session(session, from_index=false) %}
+  <div class="session">
+    <h2>{{ session._id.replace('_', '#') }} - {{ session.spot }}</h2>
+    <p class="meta">
+      Published: {{ session.pub_date }} <br />
+      Spot: {{ session.spot }} <br />
+      Toys: {{ ', '.join(session.toys) }} <br />
+    </p>
+    {{ session.body }}
+  </div>
+{% endmacro %}
