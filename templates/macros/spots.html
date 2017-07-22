@@ -1,0 +1,7 @@
+{% macro render_spot(spot, width=600, height=450) %}
+    <div id="map"></div>
+    <script type="text/javascript">
+      var pois = {{ spot.pois|tojson }};
+      $(function(){ initMap({ pois : pois, max_initial_zoom : 18 }); });
+    </script>
+{% endmacro %}

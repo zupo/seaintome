@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% from "macros/spots.html" import render_spot %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block body %}
+  {% for child in this.children %}
+    {{ render_spot(child) }}
+  {% endfor %}
+
+{% endblock %}

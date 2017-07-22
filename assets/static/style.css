@@ -40,3 +40,8 @@ header nav ul li {
 div.page {
     background: #f1fbfe;
 }
+
+#map {
+    height: 400px;
+    width: 100%;
+}

@@ -4,7 +4,7 @@
 {% block title %}{{ this.title }}{% endblock %}
 {% block body %}
   {% for child in this.pagination.items %}
-    {{ render_session(child, from_index=true) }}
+    {{ render_session(child) }}
   {% endfor %}
 
   {{ render_pagination(this.pagination) }}
