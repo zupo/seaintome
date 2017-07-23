@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% from "macros/toys.html" import render_toy %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block body %}
+  {% for child in this.children %}
+    {{ render_toy(child) }}
+  {% endfor %}
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% macro render_toy(toy) %}
+  <div class="toy">
+    <h2>{{ toy.year.year }} {{ toy.title }}</h2>
+    {{ toy.body }}
+  </div>
+
+
+    <div>
+        {{ toy.title}} has been in the water {{ toy.children.count() }} times:
+        <ul>
+        {% for session in toy.children %}
+            <li><a href="{{ session.url }}">{{ session._id.replace('_', '#') }} - {{ session.spot }}</a></li>
+        {% endfor %}
+        <ul>
+    </div>
+
+{% endmacro %}
