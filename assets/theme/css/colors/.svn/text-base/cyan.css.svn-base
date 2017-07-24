@@ -1,0 +1,121 @@
+a:hover, a:focus,
+.author-description span a:hover {
+	color: #35d3b7;
+}
+.btn-default {
+  color: #35d3b7;
+  background-color: transparent;
+  border: 2px solid #35d3b7;
+}
+.btn-default:hover {
+  background-color: #35d3b7;
+  border-color: #35d3b7;
+}
+
+.btn-default2 {
+  color: #35d3b7;
+  background-color: transparent;
+  border-color: #35d3b7;
+}
+.btn-default2:hover {
+	color: #fff;
+  	background-color: #35d3b7;
+  	border-color: #35d3b7;
+}
+.filter-list li.active {
+	background-color: #35d3b7;
+}
+.filter-list li:hover {
+	border-color: #35d3b7;
+}
+
+.header-v1 .block-menu {
+	background-color: #35d3b7;
+}
+.menu-style1 li a {
+	color: #fff;
+}
+.menu-style1 li {
+	border-bottom-color: rgba(255, 255, 255, .1);
+}
+.menu-style1 li a:before {
+	border-bottom-color: rgba(255, 255, 255, .1);
+}
+.menu-style1 ul.menu {
+	background-color: #35d3b7;
+}
+.block-menu3 {
+	background-color: #35d3b7;
+}
+.menu-style3 li a {
+	color: #fff;
+}
+.menu-style3 li {
+	border-bottom-color: rgba(255, 255, 255, .1);
+}
+.menu-style3 li a:before {
+	border-bottom-color: rgba(255, 255, 255, .1);
+}
+.menu-style3 ul.menu {
+	background-color: #35d3b7;
+}
+
+.menu-style2 > li > a:hover, .menu-style2 > li > a.active, .menu-style2 > li.active > a {
+	color: #35d3b7;
+}
+.menu-style2 ul {
+	background-color: #35d3b7;
+}
+.menu-style2 ul li {
+	border-bottom-color: rgba(255, 255, 255, .1);
+}
+.menu-style2 ul li a {
+	color: #fff;
+}
+.menu-style2 ul li a:hover {
+	background-color: rgba(255, 255, 255, .1);
+}
+.human-des-content,
+.figcaption .figcaption-content {
+	background-color: rgba(53, 211, 183, 0.80);
+}
+.human-des-content .hdc-name {
+	color: #fff;
+}
+.human-des-content .hdc-work {
+	color: #fff;
+}
+.human-des-content .quote-small,
+.human-des-content .quote-small:before {
+	color: #fff;
+}
+.figcaption .figcaption-content .caption .h5,
+.figcaption .figcaption-content .tags li a,
+.figcaption .figcaption-content .tags li a:after {
+	color: #fff;
+}
+.owl-carousel .owl-pagination .owl-page.active {
+	background-color: rgba(53, 211, 183, 0.80);
+}
+.awquote-dbquotes:before,
+.awquote-dbquotes:after {
+	color: #35d3b7;
+}
+.quote-icon i {
+	color: #35d3b7;
+}
+.circle-icon {
+	border-color: #35d3b7;
+}
+.circle-icon i {
+	color: #35d3b7;
+}
+.page-number ul li.active {
+	border-color: #35d3b7;
+}
+.page-number ul li a:focus, .page-number ul li a:hover, .page-number ul li:hover a, .page-number ul li:hover a i, .page-number ul li a:hover i {
+	color: #35d3b7;
+}
+.figcaption .figcaption-content .caption .h5 a:hover {
+  color: #fff;
+}
