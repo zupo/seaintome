@@ -1,13 +1,63 @@
-<!doctype html>
-<meta charset="utf-8">
-<link rel="stylesheet" href="{{ '/static/style.css'|url }}">
-<script src="{{ bag('gmaps.api_url') }}?key={{ bag('gmaps.key')|urlencode }}"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
-<script type=text/javascript src="{{
-  '/static/script.js'|asseturl }}" charset="utf-8"></script>
-<title>{% block title %}Welcome{% endblock %} — seaintome.com</title>
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}Welcome{% endblock %} — seaintome.com</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- ///////////////// FONT  ///////////////// -->
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700%7cCrimson+Text:400,600,400italic,700' rel='stylesheet' type='text/css'>
+
+    <!-- ///////////////// CSS  ///////////////// -->
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
+    <link type="text/css" rel="stylesheet" href="{{ '/theme/css/owl.carousel.css'|asseturl }}"/><!--css plugin-->
+    <link type="text/css" rel="stylesheet" href="{{ '/theme/css/magnific-popup.css'|asseturl }}"/><!--css plugin-->
+    <link type="text/css" rel="stylesheet" href="{{ '/theme/css/style.css'|asseturl }}"/><!-- My CSS -->
+    <link type="text/css" rel="stylesheet" href="{{ '/theme/css/responsive.css'|asseturl }}"/>
+    <link rel="stylesheet" href="{{ '/static/style.css'|url }}">
+
+    <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/livingston-css3-mediaqueries-js/1.0.0/css3-mediaqueries.js"></script>
+    <![endif]-->
+
+</head>
 <body>
-  <header>
+
+<!-- Preloader -->
+<div id="loader-wrapper">
+    <div class="loader-logo">
+        <img src="{{ '/theme/images/loader2.gif'|url }}" alt="">
+    </div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+</div>
+
+{% block body %}{% endblock %}
+
+<!-- SCRIPT -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="{{ bag('gmaps.api_url') }}?key={{ bag('gmaps.key')|urlencode }}"></script>
+<script type="text/javascript" src="{{ '/theme/js/libs/jquery.owl.carousel.js'|asseturl }}"></script>
+<script type="text/javascript" src="{{ '/theme/js/libs/magnific-popup.js'|asseturl }}"></script>
+<script type="text/javascript" src="{{ '/theme/js/libs/jquery.appear.min.js'|asseturl }}"></script>
+<script type="text/javascript" src="{{ '/theme/js/libs/jquery.countTo.js'|asseturl }}"></script>
+<script type="text/javascript" src="{{ '/theme/js/libs/jquery-isotope.js'|asseturl }}"></script>
+<script type="text/javascript" src="{{ '/theme/js/libs/imagesloaded.pkgd.min.js'|asseturl }}"></script>
+<script type="text/javascript" src="{{ '/theme/js/libs/scrollspy.js'|asseturl }}"></script>
+<script type="text/javascript" src="{{ '/theme/js/libs/jquery.infinitescroll.min.js'|asseturl }}"></script>
+<script type="text/javascript" src="{{ '/theme/js/libs/jquery.validate.min.js'|asseturl }}"></script>
+<script type="text/javascript" src="{{ '/theme/js/libs/jquery.form.min.js'|asseturl }}"></script>
+<script type="text/javascript" src="{{ '/theme/js/script.js'|asseturl }}"></script>
+<script type=text/javascript src="{{'/static/script.js'|asseturl }}" charset="utf-8"></script>
+
+
+
+<!--   <header>
     <h1>seaintome.com</h1>
     <nav>
       <ul class="nav navbar-nav">
@@ -25,9 +75,11 @@
     </nav>
   </header>
   <div class="page">
-    {% block body %}{% endblock %}
+
   </div>
   <footer>
     &copy; Copyright 2017 by Nejc Zupan.
   </footer>
+ -->
+
 </body>

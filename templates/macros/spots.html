@@ -2,6 +2,6 @@
     <div id="map"></div>
     <script type="text/javascript">
       var pois = {{ spot.pois|tojson }};
-      $(function(){ initMap({ pois : pois, max_initial_zoom : 18 }); });
+      window.onload = function() { initMap({ pois : pois, max_initial_zoom : 18 }); };
     </script>
 {% endmacro %}
