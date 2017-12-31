@@ -7,10 +7,20 @@ var loc;
 function initMap({pois, max_initial_zoom}={}){
 
     // map styling
-    var mapOptions = { mapTypeId: google.maps.MapTypeId.HYBRID};
+    var $map = $('#map');
+    var icon = $map.data('map-marker');
+    var mapOptions = { mapTypeId: 'custom_style'};
+    var styledMapOptions = {
+        name: 'Custom Style'
+    };
+    var mapTheme = [
+        {featureType: 'all',  stylers: [{saturation: -100},{gamma: 0.50}]}
+    ];
+    var customMapType = new google.maps.StyledMapType(mapTheme, styledMapOptions);
 
     // #map div is expected to exist in template
     map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    map.mapTypes.set('custom_style', customMapType);
 
     // prepare the info box shown when clicking on a marker
     var infowindow = new google.maps.InfoWindow();
@@ -40,7 +50,7 @@ function initMap({pois, max_initial_zoom}={}){
         // add a marker
         loc = new google.maps.LatLng(lat, lng);
         bounds.extend(loc);
-        var marker = new addMarker(loc, title, 'active');
+        var marker = new addMarker(icon, loc, title, 'active');
 
         // show info box when clicking on marker
         var infoBoxString = '<div style="max-width: 250pt">' +
@@ -60,11 +70,18 @@ function initMap({pois, max_initial_zoom}={}){
 }
 
 
-function addMarker(location, name, active) {
+function addMarker(icon, location, title, active) {
+
+    var icon_ = new google.maps.MarkerImage(icon,
+        new google.maps.Size(59, 65),
+        new google.maps.Point(0, 0)
+    );
+
     var marker = new google.maps.Marker({
         position: location,
         map: map,
-        title: name,
+        icon: icon_,
+        title: title,
         status: active
     });
     return marker;

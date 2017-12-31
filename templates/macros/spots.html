@@ -1,7 +1,22 @@
 {% macro render_spot(spot, width=600, height=450) %}
-    <div id="map"></div>
+    <div id="map" ></div>
     <script type="text/javascript">
       var pois = {{ spot.pois|tojson }};
+      window.onload = function() { initMap({ pois : pois, max_initial_zoom : 18 }); };
+    </script>
+{% endmacro %}
+
+{% macro render_spots(spots, theme='grayscale') %}
+    <div id="map" data-map-zoom="14" data-map-latlng="36.805178, -76.2707557" data-snazzy-map-theme="{{ theme }}" data-map-marker="{{ '/theme/images/icon-map.png'|url }}" data-map-marker-size="59*65"></div>
+    {% set pois = [] %}
+    {% for spot in spots %}
+        {% set lat = spot.pois[0].split('|')[0].strip() %}
+        {% set lng = spot.pois[0].split('|')[1].strip() %}
+        {% set poi = lat + '|' + lng + '|' + spot.title + '|' + spot.body.html|truncate(200) %}
+        {% set pois = pois.append(poi) %}
+    {% endfor %}
+    <script type="text/javascript">
+      var pois = {{ pois|tojson }};
       window.onload = function() { initMap({ pois : pois, max_initial_zoom : 18 }); };
     </script>
 {% endmacro %}
