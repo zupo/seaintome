@@ -12,11 +12,13 @@
     {% for spot in spots %}
         {% set lat = spot.pois[0].split('|')[0].strip() %}
         {% set lng = spot.pois[0].split('|')[1].strip() %}
-        {% set poi = lat + '|' + lng + '|' + spot.title + '|' + spot.body.html|truncate(200) %}
+        {% set description = spot.body.html|truncate(200) %}
+        {% set body = '{}<p><a href="{}">More ...</a></p>'.format(description, spot|url) %}
+        {% set poi = lat + '|' + lng + '|' + spot.title + '|' + body %}
         {% set pois = pois.append(poi) %}
     {% endfor %}
     <script type="text/javascript">
       var pois = {{ pois|tojson }};
-      window.onload = function() { initMap({ pois : pois, max_initial_zoom : 18 }); };
+      window.onload = function() { initMap({ pois : pois}); };
     </script>
 {% endmacro %}
