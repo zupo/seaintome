@@ -14,7 +14,7 @@
         {% set lng = spot.pois[0].split('|')[1].strip() %}
         {% set description = spot.body.html|truncate(200) %}
         {% set body = '{}<p><a href="{}">More ...</a></p>'.format(description, spot|url) %}
-        {% set poi = lat + '|' + lng + '|' + spot.title + '|' + body %}
+        {% set poi = lat + '|' + lng + '|' + spot.name + '|' + body %}
         {% set pois = pois.append(poi) %}
     {% endfor %}
     <script type="text/javascript">
