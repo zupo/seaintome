@@ -37,7 +37,93 @@
     <div class="loader-section section-right"></div>
 </div>
 
-{% block body %}{% endblock %}
+<header id="header" class="header-v2">
+  <div class="nav">
+    <div class="theme-logo">
+      <div class="theme-logo-content">
+        <a href="index.html"><img src="{{ '/static/logo.png'|url }}" alt="logo"></a>
+      </div>
+    </div>
+
+    <div class="trigger-menu">
+      <div class="shape">
+        <div class="bar">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <i class="fa fa-arrow-right"></i>
+      </div>
+    </div>
+
+    <div class="social-link">
+      <ul>
+        <li><a href="http://nejczupan.com"><i class="fa fa-globe"></i></a></li>
+        <li><a href="https://www.facebook.com/nejc.zupan"><i class="fa fa-facebook"></i></a></li>
+        <li><a href="https://twitter.com/nzupan"><i class="fa fa-twitter"></i></a></li>
+        <li><a href="https://vimeo.com/nzupan"><i class="fa fa-vimeo"></i></a></li>
+      </ul>
+    </div>
+
+    <div class="block-menu">
+      <div class="menu-content">
+        <ul class="menu">
+              <li class="leaf"><a href="#header" title="">Sessions</a></li>
+              <li class="leaf"><a href="#blog" title="">Blog</a></li>
+              <li class="leaf"><a href="#spots" title="">Spots</a></li>
+              <li class="leaf"><a href="#toys" title="">Toys</a></li>
+              <li class="leaf"><a href="#pricing" title="">About</a></li>
+          </ul>
+      </div>
+    </div>
+
+  </div>
+  <div class="header">
+    <div class="header-slider">
+      <div class="theme-slider" data-slider="single" data-control="true" data-transition="">
+        <div class="theme-slider-content">
+
+          {% for session in site.get('/sessions').children %}
+          <div class="theme-slider-item">
+            <div class="title-header white">
+              <h2 class="h2">{{ session._id.replace('_', '#') }} - {{ session.spot }}</h2>
+              <p>{{ session.body.html|truncate(100)}}`</p>
+
+            </div>
+            <div class="ts-item-background">
+              <img src="{{ '/theme/images/bg-index1.jpg'|url }}" alt="background">
+              <div class="bg-overlay"></div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        <div class="theme-slider-control slide-crt2">
+          <span class="usc-control usc-preview"><i class="fa fa-angle-left"></i></span>
+          <span class="usc-control usc-next"><i class="fa fa-angle-right"></i></span>
+          <div class="bar">
+            <div class="bar-left">Previous</div>
+            <div class="bar-right">Next</div>
+          </div>
+          <div class="other-title">
+            <span class="other-title-preview"></span>
+            <span class="other-title-next"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bar-discovery">
+      <span>Discovery</span>
+      <img src="{{ '/theme/images/discovery.png'|url }}" alt="img">
+      <div class="bar-center"></div>
+    </div>
+  </div>
+</header>
+
+<div class="main-page">
+
+  {% block body %}{% endblock %}
+
+</div>
 
 <!-- SCRIPT -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -54,8 +140,6 @@
 <script type="text/javascript" src="{{ '/theme/js/libs/jquery.form.min.js'|asseturl }}"></script>
 <script type="text/javascript" src="{{ '/theme/js/script.js'|asseturl }}"></script>
 <script type=text/javascript src="{{'/static/script.js'|asseturl }}" charset="utf-8"></script>
-
-
 
 <!--   <header>
     <h1>seaintome.com</h1>
