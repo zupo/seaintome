@@ -41,7 +41,7 @@
   <div class="nav">
     <div class="theme-logo">
       <div class="theme-logo-content">
-        <a href="index.html"><img src="{{ '/static/logo.png'|url }}" alt="logo"></a>
+        <a href="/"><img src="{{ '/static/logo.png'|url }}" alt="logo"></a>
       </div>
     </div>
 
@@ -79,43 +79,9 @@
 
   </div>
   <div class="header">
-    <div class="header-slider">
-      <div class="theme-slider" data-slider="single" data-control="true" data-transition="">
-        <div class="theme-slider-content">
-
-          {% for session in site.get('/sessions').children %}
-          <div class="theme-slider-item">
-            <div class="title-header white">
-              <h2 class="h2">{{ session._id.replace('_', '#') }} - {{ session.spot }}</h2>
-              <p>{{ session.body.html|truncate(100)}}`</p>
-
-            </div>
-            <div class="ts-item-background">
-              <img src="{{ '/theme/images/bg-index1.jpg'|url }}" alt="background">
-              <div class="bg-overlay"></div>
-            </div>
-          </div>
-          {% endfor %}
-        </div>
-        <div class="theme-slider-control slide-crt2">
-          <span class="usc-control usc-preview"><i class="fa fa-angle-left"></i></span>
-          <span class="usc-control usc-next"><i class="fa fa-angle-right"></i></span>
-          <div class="bar">
-            <div class="bar-left">Previous</div>
-            <div class="bar-right">Next</div>
-          </div>
-          <div class="other-title">
-            <span class="other-title-preview"></span>
-            <span class="other-title-next"></span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="bar-discovery">
-      <span>Discovery</span>
-      <img src="{{ '/theme/images/discovery.png'|url }}" alt="img">
-      <div class="bar-center"></div>
-    </div>
+    {% block header %}
+      header
+    {% endblock %}
   </div>
 </header>
 

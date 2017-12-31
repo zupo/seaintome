@@ -1,7 +1,47 @@
 {% extends "layout.html" %}
 {% block title %}{{ this.title }}{% endblock %}
-{% block body %}
 
+{% block header %}
+  <div class="header-slider">
+    <div class="theme-slider" data-slider="single" data-control="true" data-transition="">
+      <div class="theme-slider-content">
+
+        {% for session in site.get('/sessions').children %}
+        <div class="theme-slider-item">
+          <div class="title-header white">
+            <h2 class="h2">{{ session._id.replace('_', '#') }} - {{ session.spot }}</h2>
+            <p>{{ session.body.html|truncate(100)}}`</p>
+
+          </div>
+          <div class="ts-item-background">
+            <img src="{{ '/theme/images/bg-index1.jpg'|url }}" alt="background">
+            <div class="bg-overlay"></div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="theme-slider-control slide-crt2">
+        <span class="usc-control usc-preview"><i class="fa fa-angle-left"></i></span>
+        <span class="usc-control usc-next"><i class="fa fa-angle-right"></i></span>
+        <div class="bar">
+          <div class="bar-left">Previous</div>
+          <div class="bar-right">Next</div>
+        </div>
+        <div class="other-title">
+          <span class="other-title-preview"></span>
+          <span class="other-title-next"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bar-discovery">
+    <span>Discovery</span>
+    <img src="{{ '/theme/images/discovery.png'|url }}" alt="img">
+    <div class="bar-center"></div>
+  </div>
+{% endblock %}
+
+{% block body %}
   <section id="history" class="section section-history">
     <div class="container">
       <div class="row">
@@ -19,9 +59,10 @@
             <h3 class="h3 bor-underline">{{ post.title }}</h3>
           </div>
           <div class="section-content content-italic">
-            <p>{{ post.body.html|truncate(500)}}</p>
+            <p>{{ post.body.html|truncate(1000)}}</p>
             <div class="link-detail">
-              <a href="#portfolio" class="btn btn-default">Our work</a>
+              <a href="{{ post|url }}" class="btn btn-default">Continue reading</a>
+              <a href="./blog" class="btn btn-default pull-right">Older posts</a>
             </div>
           </div>
         </div>
@@ -36,5 +77,4 @@
       {{ render_spots(spots) }}
     </div>
   </section>
-
 {% endblock %}
