@@ -1,9 +1,13 @@
 #map {
-    height: 600px;
+    height: 500px;
     width: 100%;
 }
 
 p {
     /* original size was 16px */
     font-size: 20px;
+}
+
+#footer a {
+    color:  #eeeeee;
 }
