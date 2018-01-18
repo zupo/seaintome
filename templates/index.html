@@ -12,10 +12,9 @@
           <div class="title-header white">
             <h2 class="h2">{{ session._id.replace('_', '#') }} - {{ session.spot }}</h2>
             <p>{{ session.body.html|truncate(100)}}`</p>
-
           </div>
           <div class="ts-item-background">
-            {% set image = session.attachments.images.first() %}
+            {% set image = session.attachments.images.order_by('_slug').first() %}
             {% if image %}
               <img src="{{ image.thumbnail(1600, 820, crop=True)|url }}">
             {% else %}
