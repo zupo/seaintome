@@ -14,8 +14,13 @@
 
           </div>
           <div class="ts-item-background">
-            <img src="{{ '/theme/images/bg-index1.jpg'|url }}" alt="background">
+            {% set image = session.attachments.images.first() %}
+            {% if image %}
+              <img src="{{ image.thumbnail(1600, 820, crop=True)|url }}">
+            {% else %}
+              <img src="{{ '/theme/images/bg-index1.jpg'|url }}" alt="background">
             <div class="bg-overlay"></div>
+            {% endif %}
           </div>
         </div>
         {% endfor %}
