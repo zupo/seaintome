@@ -62,6 +62,7 @@ jQuery(document).ready(function($) {
                 itemsDesktopSmall : [980,3], // betweem 800px and 601px
                 itemsTablet: [768,3], //2 items between 600 and 0
                 itemsMobile : [480,1], // 1 item between 480 and 0
+                stopOnHover : true,
             });
             if(opt_control) {
                 owl.closest('.theme-slider').find('.theme-slider-control .usc-preview').click(function(){
