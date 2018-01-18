@@ -47,8 +47,8 @@
 }
 .owl-controls .owl-buttons {text-align: center;}
 /* mouse grab icon */
-.grabbing { 
-    cursor:url(grabbing.png) 8 8, move;
+.grabbing {
+    cursor:url(../images/grabbing.png) 8 8, move;
 }
 
 /* fix */
