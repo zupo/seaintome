@@ -52,17 +52,11 @@ jQuery(document).ready(function($) {
             owl.owlCarousel({
                 rewindNav: false,
                 pagination : opt_pagi,
-                //navigation : false,
                 singleItem: opt_single,
                 autoPlay : 4500,
                 slideSpeed : 500,
                 paginationSpeed : 500,
                 transitionStyle: opt_transition,
-                items : 5, //5 items above 1000px browser width
-                itemsDesktop : [1000,5], //3 items between 1000px and 901px
-                itemsDesktopSmall : [980,3], // betweem 800px and 601px
-                itemsTablet: [768,3], //2 items between 600 and 0
-                itemsMobile : [480,1], // 1 item between 480 and 0
                 stopOnHover : true,
             });
             owl.trigger('owl.jumpTo', 6);
