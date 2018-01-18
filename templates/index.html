@@ -6,7 +6,8 @@
     <div class="theme-slider" data-slider="single" data-control="true" data-transition="">
       <div class="theme-slider-content">
 
-        {% for session in site.get('/sessions').children %}
+        {% set sessions = site.get('/sessions').children.order_by('-date').limit(7).all()|reverse %}
+        {% for session in sessions %}
         <div class="theme-slider-item">
           <div class="title-header white">
             <h2 class="h2">{{ session._id.replace('_', '#') }} - {{ session.spot }}</h2>

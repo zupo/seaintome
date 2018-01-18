@@ -50,6 +50,7 @@ jQuery(document).ready(function($) {
             if((option_tran == 'fade')||(option_tran == 'backSlide')||(option_tran == 'goDown')||(option_tran == 'fadeUp')) opt_transition = option_tran;
 
             owl.owlCarousel({
+                rewindNav: false,
                 pagination : opt_pagi,
                 //navigation : false,
                 singleItem: opt_single,
@@ -64,6 +65,7 @@ jQuery(document).ready(function($) {
                 itemsMobile : [480,1], // 1 item between 480 and 0
                 stopOnHover : true,
             });
+            owl.trigger('owl.jumpTo', 6);
             if(opt_control) {
                 owl.closest('.theme-slider').find('.theme-slider-control .usc-preview').click(function(){
                     owl.trigger('owl.prev');
