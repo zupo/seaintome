@@ -1,3 +1,12 @@
+.highlighted-text {
+    background: rgba(25, 25, 25, .5);
+}
+
+.theme-slider .title-header .h2{
+    display: inline;
+    margin: 0 10px;
+}
+
 #map {
     height: 500px;
     width: 100%;

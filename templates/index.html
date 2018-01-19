@@ -10,8 +10,10 @@
         {% for session in sessions %}
         <div class="theme-slider-item">
           <div class="title-header white">
-            <h2 class="h2">{{ session._id.replace('_', '#') }} - {{ session.spot }}</h2>
-            <p>{{ session.body.html|truncate(100)}}`</p>
+            <h2><span class="h2 highlighted-text"><span class="h2">{{ session._id.replace('_', '#') }} - {{ session.spot }}</span></span></h2>
+            <div class="highlighted-text col-md-4 col-xs-6 col-md-offset-4">
+              <p>{{ session.body.html|truncate(200)}}</p>
+            </div>
           </div>
           <div class="ts-item-background">
             {% set image = session.attachments.images.order_by('_slug').first() %}
