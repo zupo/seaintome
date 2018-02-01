@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# heroku needs this to be here so it is recognized as a buildpack
+
+echo 'Fetch from GitHub'
+exit 0
