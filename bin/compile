@@ -53,10 +53,6 @@ echo "   UserKnownHostsFile /dev/null" >> ~/.ssh/config
 echo "   LogLevel ERROR" >> ~/.ssh/config
 echo "-----> Installed SSH key from GIT_SSH_KEY"
 
-echo "foo"
-echo $SOURCE_VERSION
-echo "bar"
-
 # checkout the revision that's being deployed
 git fetch -q --depth 1 origin -a > /dev/null
 git checkout -q ${SOURCE_VERSION:-master} -f > /dev/null
