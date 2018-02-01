@@ -1,3 +1,5 @@
+.heroku/
+.profile.d/
 bin/
 html/
 include/
