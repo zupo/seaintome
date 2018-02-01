@@ -9,7 +9,7 @@
 # but without the submodules support because I don't need it
 
 
-APP_DIR="$1"
+BUILD_DIR="$1"
 ENV_DIR="$3"
 
 # load required environment variables
@@ -27,10 +27,14 @@ if [[ -z $GIT_SSH_KEY ]]; then
 fi
 
 # make sure we're in the root of the app dir
-cd "$APP_DIR"
+cd "$BUILD_DIR"
 
 # create an empty repo to fetch into
 git init -q
+
+# configure identity so I can commit & push later on
+git config user.email "heroku@seaintome.com"
+git config user.name "Lektor on Heroku"
 
 # enable sparse checkouts, this will avoid checking out
 # all the files in the repo, we'll only check out .gitmodules
@@ -41,16 +45,16 @@ git init -q
 git remote add origin "$GIT_REPO_URL"
 
 # install the ssh key
-mkdir -p ~/.ssh
-ssh-keyscan -H github.com >> ~/.ssh/known_hosts 2> /dev/null
-cat "$ENV_DIR/GIT_SSH_KEY" > ~/.ssh/id_rsa
-chmod 600 ~/.ssh/id_rsa
+mkdir -p $BUILD_DIR/.ssh
+ssh-keyscan -H github.com >> $BUILD_DIR/.ssh/known_hosts 2> /dev/null
+cat "$ENV_DIR/GIT_SSH_KEY" > $BUILD_DIR/.ssh/id_rsa
+chmod 600 $BUILD_DIR/.ssh/id_rsa
 
 # ignore/hide ssh warnings
-echo "Host *" >> ~/.ssh/config
-echo "   StrictHostKeyChecking no" >> ~/.ssh/config
-echo "   UserKnownHostsFile /dev/null" >> ~/.ssh/config
-echo "   LogLevel ERROR" >> ~/.ssh/config
+echo "Host *" >> $BUILD_DIR/.ssh/config
+echo "   StrictHostKeyChecking no" >> $BUILD_DIR/.ssh/config
+echo "   UserKnownHostsFile /dev/null" >> $BUILD_DIR/.ssh/config
+echo "   LogLevel ERROR" >> $BUILD_DIR/.ssh/config
 echo "-----> Installed SSH key from GIT_SSH_KEY"
 
 # checkout the revision that's being deployed
