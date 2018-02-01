@@ -1,1 +1,1 @@
-lektor server
+lektor server -p $PORT
