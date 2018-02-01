@@ -51,11 +51,16 @@ cat "$ENV_DIR/GIT_SSH_KEY" > $BUILD_DIR/.ssh/id_rsa
 chmod 600 $BUILD_DIR/.ssh/id_rsa
 
 # ignore/hide ssh warnings
-echo "Host *" >> $BUILD_DIR/.ssh/config
+echo "Host github.com" >> $BUILD_DIR/.ssh/config
 echo "   StrictHostKeyChecking no" >> $BUILD_DIR/.ssh/config
 echo "   UserKnownHostsFile /dev/null" >> $BUILD_DIR/.ssh/config
 echo "   LogLevel ERROR" >> $BUILD_DIR/.ssh/config
 echo "-----> Installed SSH key from GIT_SSH_KEY"
+
+# tell git to use $BUILD_DIR/.ssh/config
+# this is only needed during build time, as during runtime, in dyno,
+# $BUILD_DIR/.ssh/id_rsa becomes ~/.ssh/id_rsa
+export GIT_SSH_COMMAND="ssh -F $BUILD_DIR/.ssh/config"
 
 # checkout the revision that's being deployed
 git fetch -q --depth 1 origin -a > /dev/null
