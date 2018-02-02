@@ -60,7 +60,8 @@ echo "-----> Installed SSH key from GIT_SSH_KEY"
 # tell git to use $BUILD_DIR/.ssh/config
 # this is only needed during build time, as during runtime, in dyno,
 # $BUILD_DIR/.ssh/id_rsa becomes ~/.ssh/id_rsa
-export GIT_SSH_COMMAND="ssh -F $BUILD_DIR/.ssh/config"
+# by using --global we only make this applied during buildtime
+export GIT_SSH_COMMAND="ssh -F $BUILD_DIR/.ssh/config -i $BUILD_DIR/.ssh/id_rsa"
 
 # checkout the revision that's being deployed
 git fetch -q --depth 1 origin -a > /dev/null
