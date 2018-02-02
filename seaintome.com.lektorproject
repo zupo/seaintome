@@ -1,2 +1,12 @@
 [project]
 name = seaintome.com
+
+[servers.github]
+name = GitHub
+enabled = yes
+target = github://master
+
+[servers.ghpages]
+name = GHPages
+enabled = yers
+target = ghpages://zupo/seaintome?cname=www.seainto.com
