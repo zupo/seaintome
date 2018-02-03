@@ -6,5 +6,6 @@
 bin/
 html/
 include/
+lektor-github/lektor_github.egg-info/
 lib/
 pip-selfcheck.json
