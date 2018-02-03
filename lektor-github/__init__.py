@@ -13,5 +13,14 @@ class GitHubPlugin(Plugin):
 class GitHubPublisher(Publisher):
 
     def publish(self, target, credentials=None, **extra):
-        for line in Command(['git'] + ['status']).safe_iter():
+        for line in Command(['git', 'status']).safe_iter():
+            yield line
+
+        for line in Command(['git', 'add', '-A']).safe_iter():
+            yield line
+
+        for line in Command(['git', 'commit', '-m', 'Automatic commit by Lektor']).safe_iter():
+            yield line
+
+        for line in Command(['git', 'push', 'origin', 'HEAD:master']).safe_iter():
             yield line
