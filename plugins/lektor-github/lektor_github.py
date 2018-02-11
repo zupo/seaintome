@@ -1,10 +1,11 @@
-from lektor.publisher import Command, Publisher, PublishError
+from __future__ import unicode_literals
+from lektor.publisher import Command, Publisher
 from lektor.pluginsystem import Plugin
 
 
 class GitHubPlugin(Plugin):
-    name = u'GitHub'
-    description = u'Support for pushing changes to GitHub.'
+    name = 'GitHub'
+    description = 'Support for pushing changes to GitHub.'
 
     def on_setup_env(self, **extra):
         self.env.publishers['github'] = GitHubPublisher
