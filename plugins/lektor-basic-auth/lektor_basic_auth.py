@@ -25,6 +25,10 @@ class BasicAuthPlugin(Plugin):
                 self.config['BASIC_AUTH_PASSWORD'] = \
                     os.environ['BASIC_AUTH_PASSWORD']
                 self.config['BASIC_AUTH_FORCE'] = True
-                BasicAuth(self)
+                BasicAuth(app=self)
+
+                # Basic HTTP Auth should only go via HTTPS
+                from flask_sslify import SSLify
+                SSLify(app=self)
 
         WebUI.__init__ = __init__
