@@ -1,19 +1,19 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "9cb07b96ae3392cfba730bd858c0c1e70ad665d68344b2a192c91e3f1f7eb840"
+            "sha256": "4660ddba12ebfae7a35f0f6877d6f5ccf44ea520c61a7efd62de0354a0abdb77"
         },
         "host-environment-markers": {
             "implementation_name": "cpython",
-            "implementation_version": "3.6.4",
+            "implementation_version": "0",
             "os_name": "posix",
             "platform_machine": "x86_64",
             "platform_python_implementation": "CPython",
             "platform_release": "17.4.0",
             "platform_system": "Darwin",
             "platform_version": "Darwin Kernel Version 17.4.0: Sun Dec 17 09:19:54 PST 2017; root:xnu-4570.41.2~1/RELEASE_X86_64",
-            "python_full_version": "3.6.4",
-            "python_version": "3.6",
+            "python_full_version": "2.7.14",
+            "python_version": "2.7",
             "sys_platform": "darwin"
         },
         "pipfile-spec": 6,
@@ -212,6 +212,10 @@
         "lektor-github": {
             "editable": true,
             "path": "./plugins/lektor-github"
+        },
+        "lektor-sessionid": {
+            "editable": true,
+            "path": "./plugins/lektor-sessionid"
         },
         "markupsafe": {
             "hashes": [

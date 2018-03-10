@@ -8,40 +8,42 @@ name = "pypi"
 [packages]
 
 argh = "*"
-asn1crypto = "*"
-babel = "*"
+"asn1crypto" = "*"
+Babel = "*"
 certifi = "*"
 cffi = "*"
 chardet = "*"
 click = "*"
 cryptography = "*"
 "enum34" = "*"
-exifread = "*"
-flask = "*"
-flask-basicauth = "*"
-flask-sslify = "*"
+ExifRead = "*"
+Flask = "*"
+Flask-BasicAuth = "*"
+Flask-SSLify = "*"
 idna = "*"
 inifile = "*"
 ipaddress = "*"
 itsdangerous = "*"
-"jinja2" = "*"
-lektor = "*"
-markupsafe = "*"
+"Jinja2" = "*"
+Lektor = "*"
+MarkupSafe = "*"
 mistune = "*"
 pathtools = "*"
 pycparser = "*"
-pyopenssl = "*"
+pyOpenSSL = "*"
 pytz = "*"
-pyyaml = "*"
+PyYAML = "*"
 requests = "*"
 "urllib3" = "*"
 watchdog = "*"
-werkzeug = "*"
+Werkzeug = "*"
 lektor-github = {path = "./plugins/lektor-github", editable = true}
 lektor-basic-auth = {path = "./plugins/lektor-basic-auth", editable = true}
+lektor-sessionid = {path = "./plugins/lektor-sessionid", editable = true}
 
 
 [dev-packages]
+
 
 
 [requires]
