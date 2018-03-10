@@ -1,0 +1,49 @@
+[[source]]
+
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+
+[packages]
+
+argh = "*"
+asn1crypto = "*"
+babel = "*"
+certifi = "*"
+cffi = "*"
+chardet = "*"
+click = "*"
+cryptography = "*"
+"enum34" = "*"
+exifread = "*"
+flask = "*"
+flask-basicauth = "*"
+flask-sslify = "*"
+idna = "*"
+inifile = "*"
+ipaddress = "*"
+itsdangerous = "*"
+"jinja2" = "*"
+lektor = "*"
+markupsafe = "*"
+mistune = "*"
+pathtools = "*"
+pycparser = "*"
+pyopenssl = "*"
+pytz = "*"
+pyyaml = "*"
+requests = "*"
+"urllib3" = "*"
+watchdog = "*"
+werkzeug = "*"
+lektor-github = {path = "./plugins/lektor-github", editable = true}
+lektor-basic-auth = {path = "./plugins/lektor-basic-auth", editable = true}
+
+
+[dev-packages]
+
+
+[requires]
+
+python_version = "2.7"

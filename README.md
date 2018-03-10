@@ -4,10 +4,8 @@ Dev env
 ```bash
 $ git clone git@github.com:zupo/seaintome.git
 $ cd seaintome
-$ virtualenv -p python .
-$ source bin/activate
-$ pip install -r requirements.txt
-$ lektor server
+$ pipenv install --two
+$ pipenv run lektor server
 ```
 
 
