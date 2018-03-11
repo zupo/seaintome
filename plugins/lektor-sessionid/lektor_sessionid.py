@@ -35,12 +35,11 @@ class SessionIDPlugin(Plugin):
                 if id_ > last_id:
                     last_id = id_
 
-            session_id = '2018_{}'.format(last_id + 1)
+            session_id = f'2018_{last_id + 1}'
             response = original_render_template(template)
             response = response.replace(
                 '</title>\n',
-                '</title>\n<p id="next-session-id" style="display:none">{}</p>\n'.format(
-                    session_id),
+                f'</title>\n<p id="next-session-id" style="display:none">{session_id}</p>\n',
             )
             response = response.replace(
                 '<script type=text/javascript src="/admin/static/gen/app.js"></script>\n',

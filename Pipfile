@@ -48,4 +48,4 @@ lektor-sessionid = {path = "./plugins/lektor-sessionid", editable = true}
 
 [requires]
 
-python_version = "2.7"
+python_version = "3.6"
