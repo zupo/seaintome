@@ -23,4 +23,8 @@ lint:
 run:
 	@pipenv run lektor server
 
+images:
+	@python3 bin/process_images.py
+
+
 .PHONY: help
