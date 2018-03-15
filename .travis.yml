@@ -1,0 +1,19 @@
+language: python
+python: 2.7
+cache:
+  directories:
+  - "$HOME/.cache/pip"
+  - "$HOME/.cache/lektor/builds"
+env:
+  global:
+    - LEKTOR_DEPLOY_USERNAME=zupo
+install: pip install Lektor
+script: lektor build
+deploy:
+  provider: script
+  script: lektor deploy ghpages
+  on:
+    branch: master
+env:
+  global:
+    secure: F/TCDHIHC1hKKmeilp4MTsgebwaesoDet/6ZCD1JfyrgZHirzJSzTWgYBzyh3qYyCx00+/oJiKgzLtGuxnsSpYAjC/JeYw5vIBwwEc5xgjSwBKGKuC0JVk4tPKfsOfJImbB4ZDcjUVmK07XjHGUzk493wfpUuUQ9S7QMmEi0GmsRW9fz1jrTXz3FpVVWoaha5XkIa0CropfbV6bQrsi2f4+Oefzb9M18DvXpgJfQRQtzsOPCekciOeGPRUjdaPPjGYhCC6H8eTxBu3xGcChCnXcIXwZvdjjV9z8jum+Eq/Oq8GBgLZfwS0U9+f4/G1X2Bm8p2Jt2Da5bXsaNrRl2DUJswF22Ri4GM0r8HJSJt5JHVtf450etrGLTg6TYpR+FKBadcl/G3HW2BF3yhbkQK5jsOoayBscWX/719w7jvEUL72zYwZyAbF3Gf45bEN5ekbMIM5dQg8ujzUN8lnxuSMt86JKWG51jBEwU2lCIy0xbEKPNH4MveOAne7zDC0WfgVGB56FPDgA2T+fpf4av7RYsrXlWFR72DmKxLGtXqtNZYMJkX58QqjlNcRpw2KpBur8qHwVWqA+W5l4YMufSGWKXJESI9N/uajbJSlu1o249xzo/SNaIIdiMi1kgiklyFaMkYWpDalZUWdbKRSIiCAjMTa104eSo/7zoWFJGHlw=
