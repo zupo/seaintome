@@ -2,11 +2,7 @@
 name = seaintome.com
 
 [servers.github]
-name = GitHub
-enabled = yes
 target = github://master
 
 [servers.ghpages]
-name = GHPages
-enabled = yes
 target = ghpages+https://zupo/seaintome?cname=seaintome.com
