@@ -9,4 +9,4 @@ target = github://master
 [servers.ghpages]
 name = GHPages
 enabled = yes
-target = ghpages+https://zupo/seaintome?cname=www.seainto.com
+target = ghpages+https://zupo/seaintome?cname=seaintome.com
