@@ -17,5 +17,4 @@ TODO
 * tests
 * upgrade to Python 3.6
 * publish to GitHub Pages
-* publish to seaintome.com
 
