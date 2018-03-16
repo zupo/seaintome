@@ -7,6 +7,19 @@ cache:
 env:
   global:
     - LEKTOR_DEPLOY_USERNAME=zupo
+    - secure: |-
+      draTHxSivg1+fVEAxs5OuJomtztaV0qUr0nOg4N0lXck09bQdraBg6s5W6mHEMy9zr
+      0MqYEkCdpwKWnZCut5vnsOVnVomyFdsdfgjszuIk9u65elWuF4aGsU6Ri0++1qez5D
+      jKeoLzSRTZ1+fc2ITFFlm3uiXfmHR3/W7qYmFYenfAUjyQJo9k20yt/XGVHMx1x5+m
+      fVMKHGDB3ImQ3vOUl2H13BlJCqVap0pcfhRsm8tnUkRE4+Ktifw1IZx4XX17BeVcq+
+      PlpQ/qNSTiKboQfLhwP1ALJMFQQf8ktXF9teJgd0A7PEDAZm8MzkD8PJ8O+H4/yCMG
+      C3zOz11oEfp9ngGOh677AkE5XhTCxw3q3Ai5C/EeW398MUvH7CF5rHmQMhKeaKMtFZ
+      IjNdw/ZYFU3m6iBhD16jDCSAMtAaCZK9mTHscOAtNps4IlUiEUBn9roL7gCeqEcxgk
+      ImFkV4PREpVkhEh0CHaU2R9OHL0WhHymwkJ9v6SCNURZE6ecpjTHPHSV0M8IsTVn0c
+      iigFfH5NDbkX7KcqZOUrlmE6Rq4oU5P3QyUpy0JKlCYVmNEZf5z/3J2FxqOR76RwLP
+      gflLl2vHVZH/ioiJhCxoGGbYqDCGMMym6kws9+Ithh21SWMx146Uy/mdSOSHUxfCsF
+      o8i6HmCv5Wk0Z65Kt/pLC5I=  # LEKTOR_DEPLOY_PASSWORD
+
 install: pip install Lektor
 script: lektor build
 deploy:
@@ -14,6 +27,3 @@ deploy:
   script: lektor deploy ghpages
   on:
     branch: master
-env:
-  global:
-    secure: F/TCDHIHC1hKKmeilp4MTsgebwaesoDet/6ZCD1JfyrgZHirzJSzTWgYBzyh3qYyCx00+/oJiKgzLtGuxnsSpYAjC/JeYw5vIBwwEc5xgjSwBKGKuC0JVk4tPKfsOfJImbB4ZDcjUVmK07XjHGUzk493wfpUuUQ9S7QMmEi0GmsRW9fz1jrTXz3FpVVWoaha5XkIa0CropfbV6bQrsi2f4+Oefzb9M18DvXpgJfQRQtzsOPCekciOeGPRUjdaPPjGYhCC6H8eTxBu3xGcChCnXcIXwZvdjjV9z8jum+Eq/Oq8GBgLZfwS0U9+f4/G1X2Bm8p2Jt2Da5bXsaNrRl2DUJswF22Ri4GM0r8HJSJt5JHVtf450etrGLTg6TYpR+FKBadcl/G3HW2BF3yhbkQK5jsOoayBscWX/719w7jvEUL72zYwZyAbF3Gf45bEN5ekbMIM5dQg8ujzUN8lnxuSMt86JKWG51jBEwU2lCIy0xbEKPNH4MveOAne7zDC0WfgVGB56FPDgA2T+fpf4av7RYsrXlWFR72DmKxLGtXqtNZYMJkX58QqjlNcRpw2KpBur8qHwVWqA+W5l4YMufSGWKXJESI9N/uajbJSlu1o249xzo/SNaIIdiMi1kgiklyFaMkYWpDalZUWdbKRSIiCAjMTa104eSo/7zoWFJGHlw=
