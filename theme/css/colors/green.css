@@ -1,0 +1,121 @@
+a:hover, a:focus,
+.author-description span a:hover {
+	color: #3fc35f;
+}
+.btn-default {
+  color: #3fc35f;
+  background-color: transparent;
+  border: 2px solid #3fc35f;
+}
+.btn-default:hover {
+  background-color: #3fc35f;
+  border-color: #3fc35f;
+}
+
+.btn-default2 {
+  color: #3fc35f;
+  background-color: transparent;
+  border-color: #3fc35f;
+}
+.btn-default2:hover {
+	color: #fff;
+  	background-color: #3fc35f;
+  	border-color: #3fc35f;
+}
+.filter-list li.active {
+	background-color: #3fc35f;
+}
+.filter-list li:hover {
+	border-color: #3fc35f;
+}
+
+.header-v1 .block-menu {
+	background-color: #3fc35f;
+}
+.menu-style1 li a {
+	color: #fff;
+}
+.menu-style1 li {
+	border-bottom-color: rgba(255, 255, 255, .1);
+}
+.menu-style1 li a:before {
+	border-bottom-color: rgba(255, 255, 255, .1);
+}
+.menu-style1 ul.menu {
+	background-color: #3fc35f;
+}
+.block-menu3 {
+	background-color: #3fc35f;
+}
+.menu-style3 li a {
+	color: #fff;
+}
+.menu-style3 li {
+	border-bottom-color: rgba(255, 255, 255, .1);
+}
+.menu-style3 li a:before {
+	border-bottom-color: rgba(255, 255, 255, .1);
+}
+.menu-style3 ul.menu {
+	background-color: #3fc35f;
+}
+
+.menu-style2 > li > a:hover, .menu-style2 > li > a.active, .menu-style2 > li.active > a {
+	color: #3fc35f;
+}
+.menu-style2 ul {
+	background-color: #3fc35f;
+}
+.menu-style2 ul li {
+	border-bottom-color: rgba(255, 255, 255, .1);
+}
+.menu-style2 ul li a {
+	color: #fff;
+}
+.menu-style2 ul li a:hover {
+	background-color: rgba(255, 255, 255, .1);
+}
+.human-des-content,
+.figcaption .figcaption-content {
+	background-color: rgba(63, 195, 95, 0.80);
+}
+.human-des-content .hdc-name {
+	color: #fff;
+}
+.human-des-content .hdc-work {
+	color: #fff;
+}
+.human-des-content .quote-small,
+.human-des-content .quote-small:before {
+	color: #fff;
+}
+.figcaption .figcaption-content .caption .h5,
+.figcaption .figcaption-content .tags li a,
+.figcaption .figcaption-content .tags li a:after {
+	color: #fff;
+}
+.owl-carousel .owl-pagination .owl-page.active {
+	background-color: rgba(63, 195, 95, 0.80);
+}
+.awquote-dbquotes:before,
+.awquote-dbquotes:after {
+	color: #3fc35f;
+}
+.quote-icon i {
+	color: #3fc35f;
+}
+.circle-icon {
+	border-color: #3fc35f;
+}
+.circle-icon i {
+	color: #3fc35f;
+}
+.page-number ul li.active {
+	border-color: #3fc35f;
+}
+.page-number ul li a:focus, .page-number ul li a:hover, .page-number ul li:hover a, .page-number ul li:hover a i, .page-number ul li a:hover i {
+	color: #3fc35f;
+}
+.figcaption .figcaption-content .caption .h5 a:hover {
+  color: #fff;
+}
