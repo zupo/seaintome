@@ -12,9 +12,8 @@ $ pipenv run lektor server
 TODO
 ----
 
-* check which JS libs are not being used at all
+* rewrite theme to bootstrap4
 * load all external JS/CSS from CDN
 * tests
 * upgrade to Python 3.6
-* publish to GitHub Pages
 
