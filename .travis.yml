@@ -1,12 +1,16 @@
+sudo: false
+
 language: python
 python: 2.7
+dist: trusty
 cache:
   directories:
   - "$HOME/.cache/pip"
   - "$HOME/.cache/lektor/builds"
+
 env:
   global:
-    - secure: |-
+  - secure: |-
       draTHxSivg1+fVEAxs5OuJomtztaV0qUr0nOg4N0lXck09bQdraBg6s5W6mHEMy9zr
       0MqYEkCdpwKWnZCut5vnsOVnVomyFdsdfgjszuIk9u65elWuF4aGsU6Ri0++1qez5D
       jKeoLzSRTZ1+fc2ITFFlm3uiXfmHR3/W7qYmFYenfAUjyQJo9k20yt/XGVHMx1x5+m
