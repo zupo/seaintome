@@ -1,6 +1,0 @@
-{% extends "layout.html" %}
-{% from "macros/sessions.html" import render_session %}
-{% block title %}Session {{ this._id.replace('_', '#')}}{% endblock %}
-{% block body %}
-  {{ render_session(this) }}
-{% endblock %}
