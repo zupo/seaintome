@@ -6,7 +6,6 @@ cache:
   - "$HOME/.cache/lektor/builds"
 env:
   global:
-    - LEKTOR_DEPLOY_USERNAME=zupo
     - secure: |-
       draTHxSivg1+fVEAxs5OuJomtztaV0qUr0nOg4N0lXck09bQdraBg6s5W6mHEMy9zr
       0MqYEkCdpwKWnZCut5vnsOVnVomyFdsdfgjszuIk9u65elWuF4aGsU6Ri0++1qez5D
@@ -24,6 +23,6 @@ install: pip install Lektor
 script: lektor build
 deploy:
   provider: script
-  script: lektor deploy ghpages
+  script: lektor deploy ghpages --username zupo --password $LEKTOR_DEPLOY_PASSWORD
   on:
     branch: master
