@@ -1,8 +1,10 @@
 *.pyc
 .cache/
+.local/
 .heroku/
 .profile.d/
 .ssh/
+.virtualenvs
 html/
 include/
 lib/
@@ -10,3 +12,5 @@ origs/sessions/
 pip-selfcheck.json
 plugins/lektor-basic-auth/lektor_basic_auth.egg-info/
 plugins/lektor-github/lektor_github.egg-info/
+plugins/lektor-sessionid/lektor_sessionid.egg-info/
+requirements.txt
