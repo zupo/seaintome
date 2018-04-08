@@ -252,6 +252,14 @@
     
     <div id="map" ></div>
     <script type="text/javascript">
+      var pois = [];
+      window.onload = function() { initMap({ pois : pois, max_initial_zoom : 18 }); };
+    </script>
+
+  
+    
+    <div id="map" ></div>
+    <script type="text/javascript">
       var pois = ["42.976633 | 17.102537 | Pelje\u0161ac, Croatia | General sailing area."];
       window.onload = function() { initMap({ pois : pois, max_initial_zoom : 18 }); };
     </script>
