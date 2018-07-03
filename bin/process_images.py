@@ -20,8 +20,8 @@ Web-ready means:
 import os
 
 
-sessions = os.path.join(os.getcwd(), 'content/sessions')
-origs = os.path.join(os.getcwd(), 'origs/sessions')
+sessions = os.path.join(os.getcwd(), "content/sessions")
+origs = os.path.join(os.getcwd(), "origs/sessions")
 
 count = 0
 for session in os.listdir(sessions):
@@ -39,13 +39,10 @@ for session in os.listdir(sessions):
         count += 1
 
         # conventions for image naming
-        renamed_image = image.lower().replace('.jpeg', '.jpg').replace(' ', '_')
+        renamed_image = image.lower().replace(".jpeg", ".jpg").replace(" ", "_")
 
         # I only care about JPGs, really
-        if not (
-            image.lower().endswith('.jpg')
-            or image.lower().endswith('.jpeg')
-        ):
+        if not (image.lower().endswith(".jpg") or image.lower().endswith(".jpeg")):
             continue
 
         # this image was already processed, skipping
@@ -54,10 +51,7 @@ for session in os.listdir(sessions):
 
         # move original from content/sessions/ to origs/sessions/
         # and make it lowercase
-        print(
-            f"Moving {image} to origs/{session}/"
-            f"{renamed_image} ..."
-        )
+        print(f"Moving {image} to origs/{session}/" f"{renamed_image} ...")
         os.rename(
             os.path.join(sessions, session, image),
             os.path.join(origs, session, renamed_image),
@@ -74,4 +68,4 @@ for session in os.listdir(sessions):
         # optimize the cropped image
         os.system(f'/Applications/ImageOptim.app/Contents/MacOS/ImageOptim "{new}"')
 
-print(f'Went though {count} images, all done.')
+print(f"Went though {count} images, all done.")
